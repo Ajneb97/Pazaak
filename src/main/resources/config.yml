@@ -1,0 +1,57 @@
+# Enables or disables the plugin update message when joining the server.
+update_notify: true
+
+# How much time players will have to accept a Pazaak invitation (in seconds).
+invitation_expire_time: 25
+
+# Max distance (in blocks) between the players when accepting a Pazaak invitation.
+invitation_max_distance: 10
+
+# Whether the player will stand automatically when reaching 20 points.
+automatic_stand: false
+
+# How much time will each player have per turn (in seconds).
+time_in_each_turn: 20
+
+# Worlds where Pazaak can't be played.
+disabled_worlds:
+  - Survival
+  - factions
+
+# This option defines the time (in seconds) to automatically save
+# player data.
+player_data_save: 300
+
+# Sounds configuration.
+# Use this format:
+# sound: <name>;<volume>;<pitch>
+# All sounds: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html
+# You can also use resource pack sounds.
+sounds:
+  end_turn:
+    enabled: true
+    sound: BLOCK_STONE_PLACE;10;1
+  generate_card:
+    enabled: true
+    sound: BLOCK_NOTE_BLOCK_PLING;10;1
+  lose_round:
+    enabled: true
+    sound: BLOCK_NOTE_BLOCK_PLING;10;0.1
+  win_round:
+    enabled: true
+    sound: ENTITY_PLAYER_LEVELUP;10;2
+  tie_round:
+    enabled: true
+    sound: BLOCK_NOTE_BLOCK_PLING;10;0.5
+  lose_game:
+    enabled: true
+    sound: BLOCK_NOTE_BLOCK_PLING;10;0.1
+  win_game:
+    enabled: true
+    sound: ENTITY_PLAYER_LEVELUP;10;2
+  add_card:
+    enabled: true
+    sound: ENTITY_WITCH_THROW;10;0.5
+  stand:
+    enabled: true
+    sound: ENTITY_FIREWORK_ROCKET_BLAST;10;0.7

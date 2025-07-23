@@ -1,0 +1,13 @@
+package pz.ajneb97.versions;
+
+public enum NMSClassType {
+    CRAFT_PLAYER,
+    CRAFT_CHAT_MESSAGE,
+    ENTITY_PLAYER,
+    PLAYER_CONNECTION,
+    PACKET,
+    PACKET_PLAY_OUT_OPEN_WINDOW,
+    CONTAINER,
+    CONTAINERS,
+    I_CHAT_BASE_COMPONENT
+}

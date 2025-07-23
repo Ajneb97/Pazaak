@@ -1,0 +1,10 @@
+main: pz.ajneb97.Pazaak
+version: ${project.version}
+name: Pazaak
+api-version: 1.13
+author: Ajneb97
+softdepend: [PlaceholderAPI,Vault]
+
+commands:
+  pazaak:
+    description: Main command of Pazaak

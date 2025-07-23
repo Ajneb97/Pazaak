@@ -1,0 +1,186 @@
+inventories:
+  main_upper:
+    slots: 54
+    0-9;13;17;18;22;26;27;31;35-45;49;53:
+      item:
+        id: BLACK_STAINED_GLASS_PANE
+        name: " "
+    10-12;19-21;28-30:
+      type: player_cards
+    14-16;23-25;32-34:
+      type: opponent_cards
+    47:
+      type: player_total_points
+    51:
+      type: opponent_total_points
+  main_lower:
+    10-16;22;27-35:
+      item:
+        id: BLACK_STAINED_GLASS_PANE
+        name: " "
+    0-2:
+      item:
+        id: LIME_STAINED_GLASS_PANE
+        name: "&a&lWIN"
+      type: player_wins
+    3:
+      item:
+        id: BLUE_TERRACOTTA
+        name: "&7End Turn"
+      type: end_turn
+    4:
+      item:
+        id: ORANGE_TERRACOTTA
+        name: "&7Stand"
+      type: stand
+    5:
+      item:
+        id: RED_TERRACOTTA
+        name: "&7Quit Game"
+      type: quit_game
+    6-8:
+      item:
+        id: LIME_STAINED_GLASS_PANE
+        name: "&a&lWIN"
+      type: opponent_wins
+    9:
+      item:
+        id: PLAYER_HEAD
+        skull_data:
+          owner: "%player_name%"
+        name: "&e%player_name%"
+    17:
+      item:
+        id: PLAYER_HEAD
+        skull_data:
+          owner: "%opponent_name%"
+        name: "&e%opponent_name%"
+    18-21:
+      type: player_bonus_cards
+    23-26:
+      type: opponent_bonus_cards
+
+custom_items:
+  stand_remaining_space:
+    id: GRAY_STAINED_GLASS_PANE
+    name: " "
+  total_points:
+    id: PAPER
+    name: "&bTotal: &f%player_points%"
+  normal_cards:
+    1:
+      id: PLAYER_HEAD
+      name: "&a&l1"
+      skull_data:
+        texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmQ2NWNlODNmMWFhNWI2ZTg0ZjliMjMzNTk1MTQwZDViNmJlY2ViNjJiNmQwYzY3ZDFhMWQ4MzYyNWZmZCJ9fX0="
+    2:
+      id: PLAYER_HEAD
+      name: "&a&l2"
+      skull_data:
+        texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGQ1NGQxZjhmYmY5MWIxZTdmNTVmMWJkYjI1ZTJlMzNiYWY2ZjQ2YWQ4YWZiZTA4ZmZlNzU3ZDMwNzVlMyJ9fX0="
+    3:
+      id: PLAYER_HEAD
+      name: "&a&l3"
+      skull_data:
+        texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjFlNGVhNTliNTRjYzk5NDE2YmM5ZjYyNDU0OGRkYWMyYTM4ZWVhNmEyZGJmNmU0Y2NkODNjZWM3YWM5NjkifX19"
+    4:
+      id: PLAYER_HEAD
+      name: "&a&l4"
+      skull_data:
+        texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGI1MjdiMjRiNWQyYmNkYzc1NmY5OTVkMzRlYWU1NzlkNzQxNGIwYTVmMjZjNGZmYTRhNTU4ZWNhZjZiNyJ9fX0="
+    5:
+      id: PLAYER_HEAD
+      name: "&a&l5"
+      skull_data:
+        texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODRjOGMzNzEwZGEyNTU5YTI5MWFkYzM5NjI5ZTljY2VhMzFjYTlkM2QzNTg2YmZlYTZlNmUwNjEyNGIzYyJ9fX0="
+    6:
+      id: PLAYER_HEAD
+      name: "&a&l6"
+      skull_data:
+        texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTIxMTNjNjA0YTIyYjIyNGZiZDM1OTdmOTA0YTdmOTIyN2E3YzFhZTUzNDM5Yzk2OTk0YmZhMjNiNTJlYiJ9fX0="
+    7:
+      id: PLAYER_HEAD
+      name: "&a&l7"
+      skull_data:
+        texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjRiZGU3OWY4NGZjNWYzZjFmYmM1YmMwMTA3MTA2NmJkMjBjZDI2M2ExNjU0ZDY0ZDYwZDg0MjQ4YmE5Y2QifX19"
+    8:
+      id: PLAYER_HEAD
+      name: "&a&l8"
+      skull_data:
+        texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjJlZTEzNzFkOGYwZjVhOGI3NTljMjkxODYzZDcwNGFkYzQyMWFkNTE5ZjE3NDYyYjg3NzA0ZGJmMWM3OGE0In19fQ=="
+    9:
+      id: PLAYER_HEAD
+      name: "&a&l9"
+      skull_data:
+        texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDM3OGYyZWQ3NzNjZDZiMjU1MTgxOTIxOGJmZjg3YzM3NGE0YjdkNmYzYjJjMjM2Nzg3ZWE3OTM2N2JmNmQxYyJ9fX0="
+    10:
+      id: PLAYER_HEAD
+      name: "&a&l10"
+      skull_data:
+        texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDFjMWQ0ODZhMmQyNDJkNTdiZDRhY2E0Y2NhOTgxNDViNjEyYWIyYTcwOGQ1OGVlNDVkMDMzNmE5OGZjMzEifX19"
+  bonus_cards:
+    "+1":
+      id: PLAYER_HEAD
+      name: "&9&l+1"
+      skull_data:
+        texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmQyMWIwYmFmYjg5NzIxY2FjNDk0ZmYyZWY1MmE1NGExODMzOTg1OGU0ZGNhOTlhNDEzYzQyZDlmODhlMGY2In19fQ=="
+    "+2":
+      id: PLAYER_HEAD
+      name: "&9&l+2"
+      skull_data:
+        texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMmIzNTEzYWE0MTE3YTNhMzI5ZTFmOWE0M2QyYThjNTFjZDcyMmFhZGQ0ZThhZjJmZWRhNjdiMzNiNjRjMjk4In19fQ=="
+    "+3":
+      id: PLAYER_HEAD
+      name: "&9&l+3"
+      skull_data:
+        texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjllMzhjODE0MzZmM2RhMTIwNjcyZWZiMTYyZDJmNGVhODc0YWIwY2U1NDVhZTMyMzc3N2Y1ZTU3M2MyNTRhIn19fQ=="
+    "+4":
+      id: PLAYER_HEAD
+      name: "&9&l+4"
+      skull_data:
+        texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjAzZDQ1NTIxYzI3ZmRkMmYyYjExMzlhMWExN2Q2NDk1ZThmNDdkOWYxMjM0OTNkNGRkOGFhMDZhZmY0MGNlIn19fQ=="
+    "+5":
+      id: PLAYER_HEAD
+      name: "&9&l+5"
+      skull_data:
+        texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWYyYTE0ZGJmOTU4ODEyNmM0M2NkMjExMWViNDFmMWRlNmQ4YzI4MWI2NTE5MTk0MzY0Yjk5NjVmYzQ1NmUifX19"
+    "+6":
+      id: PLAYER_HEAD
+      name: "&9&l+6"
+      skull_data:
+        texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWFlN2NiMzdmZmE2ODY2MzE3NjcyOTI0MzAxYjFiMjk2MzNlNmYyM2YyNTI1NTEzZGJmNzI5YmQyZDA2NiJ9fX0="
+    "-1":
+      id: PLAYER_HEAD
+      name: "&c&l-1"
+      skull_data:
+        texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGQyNDU0ZTRjNjdiMzIzZDViZTk1M2I1YjNkNTQxNzRhYTI3MTQ2MDM3NGVlMjg0MTBjNWFlYWUyYzExZjUifX19"
+    "-2":
+      id: PLAYER_HEAD
+      name: "&c&l-2"
+      skull_data:
+        texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjEzYjc3OGM2ZTUxMjgwMjQyMTRmODU5YjRmYWRjNzczOGM3YmUzNjdlZTRiOWI4ZGJhZDc5NTRjZmYzYSJ9fX0="
+    "-3":
+      id: PLAYER_HEAD
+      name: "&c&l-3"
+      skull_data:
+        texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMDMxZjY2YmUwOTUwNTg4NTk4ZmVlZWE3ZTZjNjc3OTM1NWU1N2NjNmRlOGI5MWE0NDM5MWIyZTlmZDcyIn19fQ=="
+    "-4":
+      id: PLAYER_HEAD
+      name: "&c&l-4"
+      skull_data:
+        texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTViYzQyYzY5ODQ2YzNkYTk1MzFhYzdkYmEyYjU1MzYzZjhmOTQ3MjU3NmUxN2Q0MjNiN2E5YjgxYzkxNTEifX19"
+    "-5":
+      id: PLAYER_HEAD
+      name: "&c&l-5"
+      skull_data:
+        texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGYzZjU2NWE4ODkyOGVlNWE5ZDY4NDNkOTgyZDc4ZWFlNmI0MWQ5MDc3ZjJhMWU1MjZhZjg2N2Q3OGZiIn19fQ=="
+    "-6":
+      id: PLAYER_HEAD
+      name: "&c&l-6"
+      skull_data:
+        texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzVkYTFjYjZjNGMyMzcxMDIyNGI0ZjRlOGQ2ZmZjZjhiNGI1NWY3ZmU4OTFjMTIwNGFmNzQ4NWNmMjUyYTFkOCJ9fX0="
+  unknown_bonus_card:
+    id: PLAYER_HEAD
+    name: "&c&l??"
+    skull_data:
+      texture: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmU1Mjg2YzQ3MGY2NmZmYTFhMTgzMzFjYmZmYjlhM2MyYTQ0MjRhOGM3MjU5YzQ0MzZmZDJlMzU1ODJhNTIyIn19fQ=="
