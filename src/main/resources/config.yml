@@ -18,6 +18,10 @@ disabled_worlds:
   - Survival
   - factions
 
+# Bet system config. Requires Vault + economy plugin.
+bet_system:
+  enabled: false
+
 # This option defines the time (in seconds) to automatically save
 # player data.
 player_data_save: 300

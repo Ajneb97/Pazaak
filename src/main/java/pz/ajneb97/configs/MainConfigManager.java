@@ -25,6 +25,7 @@ public class MainConfigManager {
     private List<String> disabledWorlds;
     private int playerDataSave;
     private SoundsConfig soundsConfig;
+    private boolean betSystemEnabled;
 
     public MainConfigManager(Pazaak plugin){
         this.plugin = plugin;
@@ -54,6 +55,7 @@ public class MainConfigManager {
                 configureSound(config,"sounds.add_card"),
                 configureSound(config,"sounds.stand")
         );
+        betSystemEnabled = config.getBoolean("bet_system.enabled");
     }
 
     public boolean reloadConfig(){
@@ -78,6 +80,10 @@ public class MainConfigManager {
         try{
             String text = new String(Files.readAllBytes(pathConfig));
             FileConfiguration config = getConfig();
+            if(!text.contains("bet_system")){
+                config.set("bet_system.enabled",false);
+                configFile.saveConfig();
+            }
         }catch(IOException e){
             e.printStackTrace();
         }
@@ -125,5 +131,9 @@ public class MainConfigManager {
 
     public int getPlayerDataSave() {
         return playerDataSave;
+    }
+
+    public boolean isBetSystemEnabled() {
+        return betSystemEnabled;
     }
 }

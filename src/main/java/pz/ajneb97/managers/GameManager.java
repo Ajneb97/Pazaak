@@ -169,7 +169,7 @@ public class GameManager {
     // A player has used the end turn item
     public void changeTurn(Game game){
         GamePlayer playerTurn = game.getPlayerTurn();
-        if(playerTurn.tableFull()){
+        if(playerTurn.tableFull() && !playerTurn.isOnStand()){
             FileConfiguration messages = plugin.getMessagesConfig();
             MessagesManager msgManager = plugin.getMessagesManager();
             msgManager.sendMessage(playerTurn.getPlayer(),messages.getString("tableFull"),true);
@@ -234,6 +234,13 @@ public class GameManager {
         // Check possible cases
         // 1. Player has more than 20 points
         // 2. Both players on stand, check points
+        // 3. If player has a full table
+
+        if(playerTurn.tableFull()){
+            playerWin(game,playerTurn);
+            return true;
+        }
+
         GamePlayer opponent = game.getOpponent(playerTurn.getPlayer());
         if(playerTurnPoints > 20){
             playerWin(game,opponent);

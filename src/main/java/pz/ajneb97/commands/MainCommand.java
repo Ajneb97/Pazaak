@@ -93,7 +93,7 @@ public class MainCommand implements CommandExecutor, TabCompleter {
         }
 
         double bet = 0;
-        if(args.length >= 3){
+        if(plugin.getConfigsManager().getMainConfigManager().isBetSystemEnabled() && args.length >= 3){
             try{
                 bet = Double.parseDouble(args[2]);
                 if(bet <= 0){
