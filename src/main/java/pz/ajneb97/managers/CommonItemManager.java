@@ -607,10 +607,12 @@ public class CommonItemManager {
 
         if(item.getSkullData() != null){
             String skullOwner = item.getSkullData().getOwner();
-            for(CommonVariable variable : variables){
-                skullOwner = skullOwner.replace(variable.getVariable(),variable.getValue());
+            if(skullOwner != null){
+                for(CommonVariable variable : variables){
+                    skullOwner = skullOwner.replace(variable.getVariable(),variable.getValue());
+                }
+                item.getSkullData().setOwner(skullOwner);
             }
-            item.getSkullData().setOwner(skullOwner);
         }
     }
 
