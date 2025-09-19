@@ -85,6 +85,10 @@ public class GameManager {
     }
 
     public void onInventoryClose(Player player, InventoryCloseEvent event) {
+        if(event.getInventory().getType().equals(org.bukkit.event.inventory.InventoryType.CRAFTING)){
+            return;
+        }
+
         Game game = getGameByPlayer(player);
         if(game != null){
             GamePlayer gamePlayer = game.getGamePlayer(player);
@@ -106,7 +110,7 @@ public class GameManager {
                         plugin.getInventoryManager().updateInventoryTitleWhenClosing(game,player);
                     }
                 }
-            }.runTaskLater(plugin,1L);
+            }.runTaskLater(plugin,3L);
         }
     }
 
