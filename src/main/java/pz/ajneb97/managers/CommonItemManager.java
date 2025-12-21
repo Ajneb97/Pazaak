@@ -1,5 +1,7 @@
 package pz.ajneb97.managers;
 
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 import pz.ajneb97.Pazaak;
 import pz.ajneb97.model.internal.CommonVariable;
 import pz.ajneb97.model.items.*;
@@ -40,15 +42,26 @@ public class CommonItemManager {
         }
 
         ServerVersion serverVersion = Pazaak.serverVersion;
+        boolean isPaper = plugin.getDependencyManager().isPaper();
         if(item.hasItemMeta()) {
             ItemMeta meta = item.getItemMeta();
             if(meta.hasDisplayName()) {
-                commonItem.setName(meta.getDisplayName().replace("§", "&"));
+                if(isPaper && serverVersion.serverVersionGreaterEqualThan(serverVersion,ServerVersion.v1_19_R1)){
+                    commonItem.setName(LegacyComponentSerializer.legacyAmpersand().serialize(meta.displayName()));
+                }else{
+                    commonItem.setName(meta.getDisplayName().replace("§", "&"));
+                }
             }
             if(meta.hasLore()) {
-                List<String> lore = new ArrayList<String>();
-                for(String l : meta.getLore()) {
-                    lore.add(l.replace("§", "&"));
+                List<String> lore = new ArrayList<>();
+                if(isPaper && serverVersion.serverVersionGreaterEqualThan(serverVersion,ServerVersion.v1_19_R1)){
+                    for (Component line : meta.lore()) {
+                        lore.add(LegacyComponentSerializer.legacyAmpersand().serialize(line));
+                    }
+                }else{
+                    for(String l : meta.getLore()) {
+                        lore.add(l.replace("§", "&"));
+                    }
                 }
                 commonItem.setLore(lore);
             }
